@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		Book List
+	</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+	<link href="datTables.bulma.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="style_1.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"/>
+</head>
+<body has-text-primary>
+	<code has-text-primary></code>
+	<h1 style="text-align: left; padding: 5px;font-size: 3rem;">Book List</h1>
+	<div class="container" style="margin-top: 40px; width: 100%;border: 1px double grey;">
+		<table id="tableid" class="table" width="100%">
+			<thead>
+				<tr>
+					<th>Author</th>
+					<th>Title</th>
+					<th>Manufacturer</th>
+					<th>Product Group</th>
+					<th>Edit/Delete</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<!-- <tr>
+					<th>Author</th>
+					<th>Title</th>
+					<th>Manufacturer</th>
+					<th>Product Group</th>
+					<th>Delete</th>
+				</tr>
+				 -->
+				 <th></th>
+				 <th></th>
+				<th></th>
+				<th></th>
+				 <th><input type="button" value="Add New Row" name="newrows"></th>
+			</tfoot>
+			<tbody id="tbody">
+				<tr>
+					<td id="new_Author" onclick="editRow(2)">Sidney Sheldon</td>
+					<td id="new_Title" >South of Panama </td>
+					<td id="new_Manu">Warner Books </td>
+					<td id="Book_row3">Books </td>
+					<td>
+					<input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)">
+					<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                    <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                    
+					</td>
+ 
+				</tr>
+				<tr>
+					<td>Sidney Sheldon </td>
+					<td>The Naked Face </td>
+					<td>Warner Books </td>
+					<td>Books </td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)">
+ 					<button type="button" class="btn btn-primary btn-lg" id="add-btn" onclick="myadbtn();">Add</button></td>
+				</tr>
+				</tr>
+				<tr>
+					<td>Sidney Sheldon </td>
+					<td>Angel of the Dark </td>
+					<td>Warner Books </td>
+					<td>Books </td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+ 
+				</tr>
+				<tr>
+					<td>Sidney Sheldon </td>
+					<td>The Tides of Memory </td>
+					<td>Warner Books </td>
+					<td>Books </td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+ 
+				</tr>
+				<tr>
+					<td>Sidney Sheldon </td>
+					<td>Chasing Tomorrow </td>
+					<td>Warner Books </td>
+					<td>Books </td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+ 
+				</tr><tr>
+					<td>Sidney Sheldon </td>
+					<td>Reckless </td>
+					<td>Warner Books </td>
+					<td>Books </td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+ 
+				</tr><tr>
+					<td>Sidney Sheldon </td>
+					<td>The Silent Widow </td>
+					<td>Warner Books </td>
+					<td>Books </td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+				</tr><tr>
+					<td>Sidney Sheldon </td>
+					<td>The Phoenix </td>
+					<td>Warner Books </td>
+					<td>Books </td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+				</tr><tr>
+					<td>Sidney Sheldon </td>
+					<td>The Adventures of Drippy the Runaway Raindrop </td>
+					<td>Warner Books </td>
+					<td>Books</td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+				</tr><tr>
+					<td>Sidney Sheldon</td>
+					<td>The Chase </td>
+					<td>Warner Books </td>
+					<td>Books </td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+				</tr><tr>
+					<td>Sidney Sheldon </td>
+					<td>The Dictator </td>
+					<td>Warner Books </td>
+					<td>Books </td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+				</tr><tr>
+					<td>Sidney Sheldon </td>
+					<td>Ghost Story </td>
+					<td>Warner Books </td>
+					<td>Books </td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+				</tr><tr>
+					<td>Sidney Sheldon </td>
+					<td>The Money Tree</td>
+					<td>Warner Books </td>
+					<td>Books </td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+				</tr><tr>
+					<td>Sidney Sheldon </td>
+					<td>Revenge! </td>
+					<td>Warner Books </td>
+					<td>Books </td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+				</tr><tr>
+					<td>Sidney Sheldon </td>
+					<td>Jackpot </td>
+					<td>Warner Books </td>
+					<td>Books</td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+				</tr>
+
+
+
+<tr>
+					<td>Sidney Sheldon </td>
+					<td>After the Darkness </td>
+					<td>Warner Books </td>
+					<td>Books </td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+ 
+				</tr>
+				<tr>
+					<td>Sidney Sheldon </td>
+					<td>Angel of the Dark </td>
+					<td>Warner Books </td>
+					<td>Books </td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+ 
+				</tr>
+				<tr>
+					<td>Sidney Sheldon </td>
+					<td>The Tides of Memory </td>
+					<td>Warner Books </td>
+					<td>Books </td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+ 
+				</tr>
+				<tr>
+					<td>Sidney Sheldon </td>
+					<td>Chasing Tomorrow </td>
+					<td>Warner Books </td>
+					<td>Books </td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+ 
+				</tr><tr>
+					<td>Sidney Sheldon </td>
+					<td>Reckless </td>
+					<td>Warner Books </td>
+					<td>Books </td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+ 
+				</tr><tr>
+					<td>Sidney Sheldon </td>
+					<td>The Silent Widow </td>
+					<td>Warner Books </td>
+					<td>Books </td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+				</tr><tr>
+					<td>Sidney Sheldon </td>
+					<td>The Phoenix </td>
+					<td>Warner Books </td>
+					<td>Books </td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+				</tr><tr>
+					<td>Sidney Sheldon </td>
+					<td>The Adventures of Drippy the Runaway Raindrop </td>
+					<td>Warner Books </td>
+					<td>Books</td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+				</tr><tr>
+					<td>Sidney Sheldon</td>
+					<td>The Chase </td>
+					<td>Warner Books </td>
+					<td>Books </td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+				</tr><tr>
+					<td>Sidney Sheldon </td>
+					<td>The Dictator </td>
+					<td>Warner Books </td>
+					<td>Books </td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+				</tr><tr>
+					<td>Sidney Sheldon </td>
+					<td>Ghost Story </td>
+					<td>Warner Books </td>
+					<td>Books </td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+				</tr><tr>
+					<td>Sidney Sheldon </td>
+					<td>The Money Tree</td>
+					<td>Warner Books </td>
+					<td>Books </td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+				</tr><tr>
+					<td>Sidney Sheldon </td>
+					<td>Revenge! </td>
+					<td>Warner Books </td>
+					<td>Books </td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+				</tr><tr>
+					<td>Sidney Sheldon </td>
+					<td>Jackpot </td>
+					<td>Warner Books </td>
+					<td>Books</td>
+					<td><input type="button" value="Delete" onclick="SomeDeleteRowFunction(this)"></td>
+				</tr>
+				
+			</tbody>
+		</table>	
+	</div>
+
+	<footer>
+		<p style="text-align: center; margin-top: 20px;">Follow us in Facebook  <i class="fa fa-facebook-square"></i></p>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src= " datTables.bulma.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript">
+		$('table').DataTAble();
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			    $('table').DataTable( {
+			        "order": [[ 3, "desc" ]]
+			    } );
+			}
+ );
+	</script>
+
+
+	<script type="text/javascript">
+
+
+    function SomeDeleteRowFunction(o) {
+     //no clue what to put here?
+     var p=o.parentNode.parentNode;
+         p.parentNode.removeChild(p);
+    }
+	</script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("$newrows").click(function(){
+				var addcontrols="<tr>"
+					addcontrols+="<td><input type='text'name='Author' placeholder='enter Author..'></td>"
+					addcontrols+="<td><input type='text'name='Title' placeholder='enter Title..'></td>"
+					addcontrols+="<td><input type='text'name='Manufacturer' placeholder='enter Manufacturer..'></td>"
+					addcontrols+="<td><input type='text'name='Product Group' placeholder='enter Product Group..'></td>"
+					addcontrols+="</tr>";
+					$("tableid tbody").append(addcontrols)
+			})
+		})
+	</script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+	$('[data-toggle="tooltip"]').tooltip();
+	var actions = $("table td:last-child").html();
+	// Append table with add row form on add new button click
+    $(".add-new").click(function(){
+		$(this).attr("disabled", "disabled");
+		var index = $("table tbody tr:last-child").index();
+        var row = '<tr>' +
+            '<td><input type="text" class="form-control" name="name" id="name"></td>' +
+            '<td><input type="text" class="form-control" name="department" id="department"></td>' +
+            '<td><input type="text" class="form-control" name="phone" id="phone"></td>' +
+			'<td>' + actions + '</td>' +
+        '</tr>';
+    	$("table").append(row);		
+		$("table tbody tr").eq(index + 1).find(".add, .edit").toggle();
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+	// Add row on add button click
+	$(document).on("click", ".add", function(){
+		var empty = false;
+		var input = $(this).parents("tr").find('input[type="text"]');
+        input.each(function(){
+			if(!$(this).val()){
+				$(this).addClass("error");
+				empty = true;
+			} else{
+                $(this).removeClass("error");
+            }
+		});
+		$(this).parents("tr").find(".error").first().focus();
+		if(!empty){
+			input.each(function(){
+				$(this).parent("td").html($(this).val());
+			});			
+			$(this).parents("tr").find(".add, .edit").toggle();
+			$(".add-new").removeAttr("disabled");
+		}		
+    });
+	// Edit row on edit button click
+	$(document).on("click", ".edit", function(){		
+        $(this).parents("tr").find("td:not(:last-child)").each(function(){
+			$(this).html('<input type="text" class="form-control" value="' + $(this).text() + '">');
+		});		
+		$(this).parents("tr").find(".add, .edit").toggle();
+		$(".add-new").attr("disabled", "disabled");
+    });
+	// Delete row on delete button click
+	$(document).on("click", ".delete", function(){
+        $(this).parents("tr").remove();
+		$(".add-new").removeAttr("disabled");
+    });
+});
+
+</script>
+</body>
+
+
+
+
+
+
